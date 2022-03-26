@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://kit.fontawesome.com/9ad267b18e.js" crossorigin="anonymous"></script>
+    <title>To Do App</title>
+</head>
+<body>
+    <header class="header">
+        <h3>Task-Master</h3>
+
+    </header>
+
+    <main class="main_section">
+        <div class="sidebar">
+            <!-- This is the sidebar -->
+            <h4><a href="/finished">COMPLETED TASKS</a></h4>
+
+        </div>
+
+        <div class="middle-main-div">
+            
+           <div class="list_inputs">
+              <h3 id ="add-task">Add Task</h3>
+              <!-- line break -->
+
+              <form action="/add-to-list" method="POST">
+                    <h5 id ="task-description">Describe</h5>
+                    <input type="text" 
+                           id="description" 
+                           placeholder="Input your task here"
+                           name="task"
+                           required>
+ 
+                     <!-- line break -->
+                    <div class="date-and-category">
+                        <div class="category">
+                    
+                           <h5>Category</h5>
+                           <select name="taskCategory"
+                                    id="category-list"
+                                    required >
+                              <option value="General Task" id="option-0"> General Task</option>
+                              <option value=" Personal">Personal</option>
+                              <option value="Office/Study">Office/Study</option>
+                              <option value="Household">Household</option>
+                           </select>
+ 
+                        </div>
+ 
+ 
+                        <div class="date">
+                              <h5>Due Date</h5>
+                              <input type="date" 
+                                     name="taskDate" 
+                                     required>
+                        </div>
+ 
+                     </div>
+ 
+                     <div class="buttons">
+                         <button type="submit"> <i class="fa-solid fa-list-ol"></i> &nbsp &nbsp Add</button>
+                     </div>
+              </form>
+          </div>
+          <% for (let i of Task) { %>
+         <div class="task-cards">
+           
+            
+            <div class="task-card-details">
+                
+                <p><%=i.desc %></p>
+                <h5><i class="fa-regular fa-calendar-days"></i>&nbsp <%= i.date%></h5>
+                <!-- <h5>Category</h5> -->
+            </div>
+           
+            <div class="task-card-buttons">
+                <span><h4><%= i.category%></h4></span>
+               <div>
+                <button id="task-completed"> <a href="/completed/?id=<%=i._id%>"><i class="fa-solid fa-circle-check "></i></a></i></button>
+                            <button id="task-remove"><a 
+                                            href="/delete/?id=<%=i._id%>">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
+                            </button>
+               </div>
+                
+            </div>
+           
+
+        
+          </div>
+         <% } %>
+
+         </div>
+         
+        
+    </main>
+    
+</body>
+</html>

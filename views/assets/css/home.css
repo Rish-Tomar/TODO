@@ -1,0 +1,248 @@
+.header{
+    height:15%;
+    font-family:serif;
+    font-size:50px;
+    background-color: rgb(211 235 198);
+    color: rgb(72, 87, 102);
+    text-align: center;
+   
+}
+
+body{
+    background-color: rgb(211 235 198);
+}
+
+
+.main_section{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width:25%;
+}
+.sidebar h4 a{
+    text-decoration: double;
+}
+
+.sidebar h4 a:hover{
+    color:rgb(73, 4, 4);
+    box-shadow: 1px 1px 5px rgb(70, 172, 136);
+}
+
+#add-task{
+    border-bottom: 1px solid black;
+    color: rgb(72, 87, 102);
+    text-align: center;
+    font-family:cursive;
+}
+
+.middle-main-div{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    height: 300px;
+}
+
+
+.list_inputs{
+    
+    width: 100%;
+    height: 300px;
+    background-color: rgb(251 250 253);
+    box-shadow:5px 5px 10px rgb(95, 158, 60);
+    
+    
+   
+
+}
+
+#task-description{
+    padding-left:5px
+}
+
+#description{
+    margin-top: -22px;
+    font-size: large;
+    border:none;
+    background-color:rgb(251 250 253);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.date-and-category{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.date{
+    border-left: 1px solid black;
+    width:50%;
+    height:65px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+ .category{
+    width:50%;
+}
+.category:hover{
+    background-color: rgb(202, 235, 248);
+}
+
+.category h5{
+    margin-top: -2px;
+    margin-bottom: 2px;
+    padding-left:5px;
+}
+
+#category-list{
+    
+    background-color:rgb(251 250 253);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border:none;
+    padding: 5px;
+    width: 90%;
+    font-size:medium;
+
+}
+
+#category-list:hover{
+    background-color: rgb(202, 235, 248);
+}
+
+.date h5{
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+.date:hover{
+    background-color: rgb(202, 235, 248);
+}
+
+.date input{
+    background-color:rgb(251 250 253);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border:none;
+    padding: 5px;
+    width: 90%;
+
+}
+
+.date input:hover{
+    background-color: rgb(202, 235, 248);
+}
+
+.buttons{
+   text-align: center;
+}
+.buttons button{
+    width:20%;
+    margin:15px;
+    margin-top: 25px;
+    padding:10px;
+}
+
+.buttons button:hover{
+    background-color: black;
+    color:white
+}
+
+.task-cards{
+    width:100%;
+    margin-top: 8px;
+    box-shadow:5px 5px 10px rgb(95, 158, 60);
+    background-color: rgb(220, 240, 245);
+    display: flex;
+    flex-direction: row;
+}
+
+.task-cards p{
+    padding-left: 8px;
+}
+
+.task-card-details{
+    width:85%;
+}
+.task-card-details h5{
+    margin-bottom: 1px;
+    margin-left: 4px;
+}
+
+.task-card-buttons{
+    width:15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card-buttons button{
+    height:100%;
+    margin: 2px;
+}
+.task-card-buttons span{
+    height:40%;
+    background-color: rgb(180, 103, 161);
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+.task-card-buttons span h4{
+    margin-top: 3px;
+    padding-left: 3px;
+}
+.task-card-buttons div{
+    height:55%;
+    width:100%;
+}
+
+#task-completed {
+    width:40%
+}
+#task-completed a{
+    text-decoration: none;
+}
+
+#task-remove{
+    width:40%
+}
+#task-completed:hover {
+    background-color: aquamarine;
+    border: none;
+    box-shadow: 1px 0px 2px rgb(12, 41, 31);
+
+
+}
+
+#task-remove:hover{
+  background-color: aquamarine;
+  border: none;
+  box-shadow: 1px 0px 2px rgb(12, 41, 31);
+}
+
+
+/* //for finished page */
+
+.finished-task-cards{
+    
+    margin-top: 8px;
+    box-shadow:5px 5px 10px rgb(95, 158, 60);
+    background-color: rgb(220, 240, 245);
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finished-task-cards p{
+    margin:10px;
+   
+}
+
+#outerdiv{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}

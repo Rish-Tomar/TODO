@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://kit.fontawesome.com/9ad267b18e.js" crossorigin="anonymous"></script>
+    <title>To Do App</title>
+</head>
+<body>
+    <header class="header">
+        <h3>Task-Master</h3>
+
+    </header>
+
+    <main class="main_section">
+        <div class="sidebar">
+            <!-- This is the sidebar -->
+            <h4><a href="/">Home</a></h4>
+
+        </div>
+       <div id="outerdiv">
+        <% for (let i of Task) { %>
+            <div class="finished-task-cards">
+                <p><%= i.desc     %></p>
+                <div style="display: flex; flex-direction: row;">
+                    <p style="margin: auto; padding-right: 15px;"><%= i.category %> </p>
+                    <a href="/delete/?id=<%=i._id%>"><i class="fa-solid fa-rectangle-xmark" style="width: 20px; margin-top: 10px;"></i></a>
+                </div>
+                
+            </div>
+            <% } %> 
+       </div>
+
+        
+        
+    </main>
+    
+</body>
+</html>
